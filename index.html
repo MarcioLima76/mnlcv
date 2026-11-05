@@ -54,25 +54,20 @@
       margin-bottom: 1.8rem;
     }
 
-    .avatar-icon {
-      font-size: 5rem;
-      color: #2a5c7a;
-      background: #d9e6f0;
+    .avatar-photo {
       width: 120px;
       height: 120px;
+      object-fit: cover;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
       margin: 0 auto 1rem;
       box-shadow: 0 8px 16px rgba(0, 30, 50, 0.15);
       border: 3px solid white;
       transition: 0.3s;
     }
 
-    .avatar-icon:hover {
+    .avatar-photo:hover {
       transform: scale(1.02);
-      background: #c8ddec;
     }
 
     .name {
@@ -475,9 +470,7 @@
   <!-- SIDEBAR (ESQUERDA) -->
   <aside class="sidebar">
     <div class="avatar">
-      <div class="avatar-icon">
-        <i class="fas fa-user-tie"></i>
-      </div>
+      <img class="avatar-photo" src="MNLeditedphoto.png" alt="Foto de Marcio N. de Lima">
       <div class="name">
         Marcio N. de Lima
         <small>Professor de Inglês · CELTA</small>
@@ -755,7 +748,7 @@
   }
 
   // Adicionar um pequeno toque interativo no avatar
-  document.querySelector('.avatar-icon')?.addEventListener('click', function() {
+  document.querySelector('.avatar-photo')?.addEventListener('click', function() {
     this.style.transform = 'scale(0.95) rotate(-3deg)';
     setTimeout(() => { this.style.transform = 'scale(1) rotate(0deg)'; }, 150);
   });
